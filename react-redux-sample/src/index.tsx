@@ -8,6 +8,9 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
 ReactDOM.render(
+  // createStoreで作成したストアのシングルトン(./store.ts)をProviderに渡す
+  // Provider の定義  React.Component<ProviderProps, {}>
+  // 
   <Provider store={store}>
     <Counter />
   </Provider>,

@@ -4,6 +4,7 @@ import { Dispatch } from 'redux';
 import { decrementAmount, incrementAmount } from '../modules/CounterModule';
 import { ReduxAction, ReduxState } from '../store';
 
+// Dispatcher が sotre に変更した値を Dispatch する。
 export class ActionDispatcher {
   constructor(private dispatch: (action: ReduxAction) => void) {}
 
@@ -16,6 +17,7 @@ export class ActionDispatcher {
   }
 }
 
+// App に公開されている Counter コンポーネント Provider 
 export default connect(
   (state: ReduxState) => ({value: state.counter}), // ①
   (dispatch: Dispatch<ReduxAction>) => ({actions: new ActionDispatcher(dispatch)}) // ②

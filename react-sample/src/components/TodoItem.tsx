@@ -3,10 +3,8 @@
 import * as React from 'react';
 import '../App.css';
 
-export default class TodoItem extends React.Component<ITodoProp, {}> {
-    constructor(param: ITodoProp) {
-        super(param);
-    }
+export default class TodoItem extends React.Component<ITodoProp, {}>
+{
     render() {
         return (
             (this.props.todo.checked) 
